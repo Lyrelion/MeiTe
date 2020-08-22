@@ -1,0 +1,330 @@
+/*这个文件里面放的是 首页的样式*/
+
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 219px;
+    margin-top: 10px;
+}
+
+.focus {
+    /* 焦点图 子绝父相 保证左右按钮定位*/
+    position: relative;
+    width: 720px;
+    height: 455px;
+}
+
+.arrow-l,
+.arrow-r {
+    /* 焦点图左右按钮 */
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-family: 'icomoon';
+    font-size: 18px;
+}
+
+.arrow-r {
+    right: 0;
+}
+
+.circle {
+    /* 焦点图小圆点 */
+    position: absolute;
+    bottom: 10px;
+    left: 360px;
+    margin-left: -44px;
+}
+
+.circle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    /* 小圆点半透明效果 */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 0 3px;
+    border-radius: 50%;
+    /*鼠标经过显示小手*/
+    cursor: pointer;
+}
+
+.current {
+    /* 焦点图 当前选中的小圆点 */
+    background-color: #fff;
+    background-origin: shadow 2px;
+}
+
+.newsflash {
+    width: 250px;
+    height: 455px;
+}
+
+.news {
+    height: 163px;
+    border: 1px solid #ccc;
+}
+
+.news-hd {
+    /* 不指定宽度时 默认和父盒子一样宽 */
+    height: 32px;
+    /*dotted 点线  dashed  虚线*/
+    border-bottom: 1px dotted #ccc;
+    /* 如果不写宽度 写padding就不会撑开盒子 */
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.news-hd a {
+    float: right;
+    font-size: 12px;
+    font-family: 'icomoon';
+}
+
+.news-bd {
+    padding: 10px 0 0 15px;
+}
+
+.news-bd li {
+    height: 23px;
+}
+
+.lifeservice {
+    /* 父级清除浮动 防止影响布局 */
+    overflow: hidden;
+    height: 208px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.lifeservice ul {
+    /* ul相当于li的父元素 他加宽可以让 li 适当变宽 防止li 装不下 ul（重要） */
+    width: 252px;
+}
+
+.lifeservice li {
+    position: relative;
+    float: left;
+    width: 62px;
+    height: 70px;
+    /* 只需要给右边框和底边框 因为父盒子有宽度 */
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.lifeservice li a {
+    display: block;
+    /* overflow: hidden;给父级元素添加 解决i 引起的 外边距塌陷合并的问题*/
+    overflow: hidden;
+    height: 100%;
+}
+
+.lifeservice li p {
+    text-align: center;
+}
+
+.hot {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12px;
+    height: 15px;
+    background: url(../img/jian.jpg) no-repeat;
+}
+
+.service_ico {
+    /* 转换成块级元素 方便设计生活服务模块图标大小 不设置 会让图标消失 */
+    display: block;
+    width: 25px;
+    height: 30px;
+    background: url(../img/icons.png) no-repeat;
+    /* 块级元素居中 */
+    margin: 10px auto;
+}
+
+.service_ico_huafei {
+    background-position: -20px -15px;
+}
+
+.service_ico_feiji {
+    width: 26px;
+    background-position: -91px -15px;
+}
+
+.bargain {
+    /* 生活服务模块 底部广告 */
+    height: 75px;
+    margin-top: 5px;
+}
+
+
+/*推荐模块*/
+
+.recommend {
+    height: 163px;
+    margin-top: 10px;
+}
+
+.recom-hd {
+    width: 200px;
+    height: 163px;
+    background-color: #5c5251;
+    text-align: center;
+}
+
+.recom-hd img {
+    margin: 30px 0 10px 0;
+}
+
+.recom-hd h3 {
+    font-size: 18px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.recom-bd {
+    width: 1000px;
+    height: 163px;
+    background-color: #ebebeb;
+}
+
+.recom-bd li {
+    float: left;
+    width: 249px;
+    height: 145px;
+    border-right: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.recom-bd .last {
+    /* 推荐模块最后一个盒子没右边框 左边的li盒子都有右边框 相当于竖线隔断效果 */
+    border-right: 0;
+}
+
+
+/*floor 楼层区*/
+
+.box-hd {
+    height: 30px;
+    border-bottom: 2px solid #0000CD;
+    margin-top: 25px;
+}
+
+.box-hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #0000CD;
+}
+
+.tab-list {
+    float: right;
+    line-height: 30px;
+}
+
+.tab-list li {
+    float: left;
+}
+
+.tab-list li a {
+    margin: 0 15px;
+}
+
+.box-bd {
+    height: 360px;
+}
+
+
+/* 下面给楼层区五个盒子分别设置不同的宽度大小 */
+
+.w209 {
+    width: 209px;
+    background-color: #f9f9f9;
+}
+
+.w329 {
+    width: 329px;
+}
+
+.w219 {
+    width: 219px;
+    border-right: 1px solid #ccc;
+}
+
+.w220 {
+    width: 220px;
+    border-right: 1px solid #ccc;
+}
+
+.tab-con li {
+    float: left;
+    height: 360px;
+}
+
+.tab-con-item {
+    /* 给每个大小不同的盒子 装一个div 里面放图片 设置一个底边 */
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-con-list {
+    /* 相当于超出的li 隐藏起来 因为有给ul设定的比ul的父盒子宽 所以li 可以超出ul的父盒子 */
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.tab-con-list li {
+    width: 86px;
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #ccc;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.box-bd li {
+    /* 给父盒子li清除浮动 从而让里面的图片div浮动 不会影响下面的布局 */
+    overflow: hidden;
+}
+
+.box-bd img {
+    /*过渡写到本身上， 谁做动画，给谁加*/
+    transition: all .2s;
+}
+
+.box-bd img:hover {
+    /*鼠标经过图片 往右走 8px*/
+    margin-left: 8px;
+}
+
+
+/*电梯导航*/
+
+.fixedtool {
+    position: fixed;
+    top: 300px;
+    /* 距离浏览器50% */
+    left: 50%;
+    /* 向左移动版心的一半 + 本身的长度 实现紧贴版心移动的效果 */
+    margin-left: -676px;
+    width: 66px;
+    background-color: #fff;
+}
+
+.fixedtool li {
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 12px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.fixedtool .current {
+    background-color: #0000CD;
+    color: #fff;
+}

@@ -1,0 +1,322 @@
+/*公共样式*/
+/*向左浮动*/
+.fl {
+	float: left;
+}
+/*向右浮动*/
+.fr {
+	float: right;
+}
+/*自定义文字图标 这里文件路径注意 需要到上一级../然后再进入font 区别于html中的路径书写*/
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?7kkyc2');
+    src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*向右浮动中 下拉菜单 > 这个小箭头用到了文字图标*/
+.fr .icomoon {
+	font-family: 'icomoon';
+	/*单独设置大小高度 因为文字图标和普通文字不能看起来居中*/
+	font-size: 16px;
+	line-height: 26px;
+}
+/*版心 宽度给定 自动居中*/
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+/*有的链接直接显示为特殊的颜色*/
+.style-blue {
+	color:	#0000CD;
+}
+/*用 li 模拟京东小竖线 宽度为1 高度指定*/
+.spacer {
+	width: 1px;
+	height: 12px;
+	background-color: #666;
+	margin: 9px 12px 0;
+}
+/*顶部快捷导航*/
+.shortcut {
+	height: 31px;
+	background-color: #f1f1f1;
+	/*行高等于高度实现行内元素居中显示*/
+	line-height: 31px;
+}
+/*两个div有左右浮动，div内部的li都是左侧浮动贴着自己的div*/
+.shortcut li {
+	float: left;
+}
+/*header区域*/
+/*可以利用定位来安排header部分的四个模块*/
+.header {
+	position: relative;
+	/*直接把模块间的距离量好，省去写margin的麻烦*/
+	height: 105px;
+}
+.logo {
+	position: absolute;
+	/*logo相较于header盒子进行定位 顶着左边*/
+	top: 25px;
+	left: 0;
+	/*logo作为背景图片，不可以作为插入图片，且一定要设置大小*/
+	/*width: 175px;*/
+	/*height: 56px;*/
+	width: 185px;
+	height: 80px;
+}
+.logo a {
+	/*要给logo中的链接设置为和logo一样的宽高 这样就能点击全部logo 需要将之转换成块级元素*/
+	display: block;
+	/*淘宝隐藏关键字的方法 首行缩进 溢出隐藏*/
+	/*overflow: hidden;*/
+	/*text-indent: -999px;*/
+	width: 185px;
+	height: 80px;
+	background: url(../img/logo.png) no-repeat;
+	/*注意单独设置背景图片的大小 不然会显示的不完全 其实背景图片大小决定了logo盒子的大小 但是这个背景图片是我自己作的 最好按照别人量好的大小设定*/
+	background-size: 185px 80px;
+	/*京东隐藏关键字的方法 字号设置为0*/
+	font-size: 0;
+}
+.search {
+	/*搜索框利用定位在header中摆放位置*/
+	position: absolute;
+	top: 25px;
+	left: 348px;
+}
+.text {
+	/*输入框和按钮都左浮动实现紧贴效果*/
+	float: left;
+	/*注意搜索框的宽高测量不包括 边 的部分*/
+	width: 445px;
+	height: 32px;
+	border: 2px solid #0000CD;
+	/*输入框中的内容输入时不能紧贴搜索框 所以设置padding 同时设置这个属性要记得防止把盒子撑大 因此要在width中减掉padding值*/
+	padding-left: 10px;
+	/*搜索框中默认的文字颜色设置*/
+	color: #ccc;
+}
+.btn {
+	float: left;
+	width: 82px;
+	height: 36px;
+	background-color: #0000CD;
+	border: 0;
+	font-size: 16px;
+	color: #fff;
+}
+.hotwrods {
+	position: absolute;
+	top: 65px;
+	left: 348px;
+}
+.hotwrods a {
+	/*a作为行内元素不能设置高度 但可以设置左右边距*/
+	margin: 0 10px;
+}
+.shopcar {
+	position: absolute;
+	top:25px;
+	right: 64px;
+	width: 138px;
+	height: 34px;
+	border: 1px solid #dfdfdf;
+	background-color: #f7f7f7;
+	/*设置 行高=模块高度 使得购物车模块内容居中*/
+	line-height: 34px;
+	/*设置text-align是让文字水平居中*/
+	text-align: center;
+}
+/*购物车文字图标*/
+.car {
+	font-family: 'icomoon';
+	color: #0000CD;
+	margin-right: 5px;
+}
+/*购物车小箭头文字图标*/
+.arrow {
+	font-family: 'icomoon';
+	margin-left: 5px;
+}
+/*购物车数量小蓝点显示*/
+.count {
+	/*这个的父级是购物车模块 注意定位方式*/
+	position: absolute;
+	top: -5px;
+	/*应该是左侧对齐 文字才能往右走显示 否则随着数目的增大会向左增加小圆点宽度 不符合常理*/
+	left: 100px;
+	background-color: #0000FF;
+	/*不可以指定宽度，因为随着数字位数的改变这个盒子宽度也会改变 设置padding让其自行撑开即可*/
+	height: 14px;
+	padding: 0 3px;
+	line-height: 14px;
+	color: #fff;
+	/*border-radius: 左上角 右上角  右下角  左下角;*/
+	border-radius: 7px 7px 7px 0;
+}
+/*nav start*/
+.nav {
+	/*通栏盒子不需要宽度 默认和浏览器一样宽 导航栏最下面的线是很粗很明显的分割线*/
+	height: 45px;
+	border-bottom: 2px solid #0000CD;
+}
+.dropdown {
+	width: 209px;
+	height: 45px;
+}
+.dropdown .dt {
+	height: 100%;
+	background-color: #0000CD;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	line-height: 45px;
+}
+.dropdown .dd {
+	height: 465px;
+	background-color: #0000FF;
+	/*这个盒子隐藏了 会遮挡住粗边框 所以向上间隔2px*/
+	margin-top: 2px;
+} 
+/*鼠标移动到导航栏 li 上背景会变白  */
+.menu_item:hover {
+	background-color: #fff;
+}
+/*鼠标经过li 里面的 a 文字变蓝色*/
+.menu_item:hover a {
+	color: #0000FF;
+}
+.menu_item {
+	height: 31px;
+	line-height: 31px;
+	margin-left: 1px;
+	padding: 0 10px;
+}
+.menu_item a {
+	font-size: 14px;
+	color: #fff;
+}
+.menu_item i {
+	/*每个li中的 >文字图标 靠右进行右浮动比较整齐*/
+	float: right;
+	font-family: 'icomoon';
+	font-size: 18px;
+	color: #fff;
+}
+/*导航栏中的右导航栏*/
+.navitems {
+	margin-left: 10px;
+}
+.navitems li {
+	float: left;
+}
+.navitems li a {
+	/*a转换成块级元素才能设置宽高*/
+	display: block;
+	height: 45px;
+	padding: 0 25px;
+	line-height: 45px;
+	font-size: 16px;
+}
+/*footer 部分*/
+.footer {
+	height: 386px;
+	background-color: #f5f5f5;
+	padding-top: 30px;
+}
+.mod_service {
+	/*正品保障部分下方的盒子线应该显示出来*/
+	height: 79px;
+	border-bottom: 1px solid #ccc;
+}
+.mod_service li {
+	/*正品保障部分平均分成五个li，向左浮动实现紧贴效果*/
+	float: left;
+	width: 240px;
+	height: 79px;
+}
+.mod-service-icon {
+	/*这是正品保障部分的公共代码 运用了精灵技术 所有背景图片都在一张上 只有位置不同*/
+	/*每个li中的两个盒子也要保持浮动 所以正品保障部分每个li左边这个放背景图片的盒子均需要左浮动*/
+	/*浮动的盒子 可以直接给大小的 不需要转换*/
+	float: left;
+	width: 59px;
+	height: 59px;
+	margin-left: 35px;
+	background: url(../img/icons.png) no-repeat;
+}
+/*接下来针对不同的背景图片设置 在对应大背景图片中的坐标 注意负值*/
+.mod_service_zheng {
+	background-position: -282px 0;	
+}
+.mod_service_kuai {
+	background-position: -282px -61px;
+}
+.mod_service_bao {
+	background-position: -282px -123px;
+}
+.mod_service_jiang {
+	background-position: -284px -184px;
+}
+.mod_service_bang {
+	background-position: -282px -246px;
+}
+.mod_service_tit {
+	/*每个li中的右盒子浮动*/
+	float: left;
+	margin-left: 5px;
+}
+.mod_service_tit h5 {
+	margin: 5px 0;
+}
+/*脚部第二个盒子 各种连接 也要显示底边边框*/
+.mod_help {
+	height: 187px;
+	border-bottom: 1px solid #ccc;
+}
+/*各种连接的所有元素都要左浮动 平分成五份 指定宽度*/
+.mod_help_item {
+	float: left;
+	/*padding会撑开盒子 所以要让版心减去五份padding再÷5可得宽度*/
+	width: 190px;
+	padding: 20px 0 0 50px;
+}
+.mod_help_item dt {
+	/*标题*/
+	height: 25px;
+	font-size: 16px;
+}
+.mod_help_item dd {
+	/*内容*/
+	height: 22px;
+}
+.mod_help_app dt,
+.mod_help_app p {
+	padding-left: 15px;
+}
+.mod_help_app img {
+	/*美特网二维码*/
+	width: 100px;
+	height: 100px;
+	margin: 7px 0;
+}
+.mod_copyright {
+	text-align: center;
+}
+.mod_copyright_links {
+	margin: 20px 0 15px 0;
+}
+.mod_copyright_info {
+	line-height: 18px;
+}
+
+
+
+
+

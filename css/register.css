@@ -1,0 +1,168 @@
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+.header {
+    height: 82px;
+    border-bottom: 2px solid #0000CD;
+}
+
+.logo {
+    padding-top: 15px;
+}
+
+.logo img {
+    width: 195px;
+    height: 70px;
+}
+
+.registerarea {
+    /* 注册大盒子 */
+    height: 520px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.registerarea h3 {
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    padding: 0 10px;
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.registerarea h3 em {
+    /* em内容和标题内容在一行上 进行单独设置 他俩是包含关系 */
+    float: right;
+    font-size: 14px;
+}
+
+.registerarea a {
+    color: #0000CD;
+}
+
+.reg_form {
+    /* 专门装表单的盒子 */
+    width: 600px;
+    height: 400px;
+    margin: 40px auto 0;
+}
+
+.reg_form li {
+    margin-bottom: 15px;
+}
+
+.reg_form label {
+    /* 指的是 手机号 短信验证码 这种网页提示信息 让文本右对齐实现整洁画面 */
+    display: inline-block;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: right;
+}
+
+.inp {
+    /* 输入框 统一设置 */
+    width: 238px;
+    height: 34px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+}
+
+.error {
+    /* 错误信息装在span 中 对应的文字应该换颜色 所以这么设置span */
+    color: #df3033;
+    margin-left: 10px;
+}
+
+.error_icon,
+.success_icon {
+    /* i 负责引入正确错误的背景图片 为了可以设置宽高且在一行上显示 进而转换成行内块 */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../img/error.png) no-repeat;
+    /* 文字图片中线对齐 */
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.success {
+    color: #40b83f;
+    margin-left: 10px;
+}
+
+.success_icon {
+    background-image: url(../img/success.png);
+}
+
+.safe {
+    /* 安全程度 */
+    padding-left: 187px;
+    color: #b2b2b2;
+}
+
+.safe em {
+    /* 安全程度中的弱、中、强 彩色框提示 */
+    padding: 0 12px;
+    color: #fff;
+}
+
+.ruo {
+    background-color: #de1111;
+}
+
+.zhong {
+    background-color: #40b83f;
+}
+
+.qiang {
+    background-color: #f79100;
+}
+
+.agree {
+    /* 同意协议的小li  */
+    padding-top: 20px;
+    padding-left: 100px;
+}
+
+.agree input {
+    /* 同意协议的那个选择 和 后面的 a协议连接中线对齐 */
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.agree a {
+    color: #1ba1e6;
+}
+
+.over {
+    /* li 中的完成注册按钮 */
+    width: 200px;
+    height: 34px;
+    background-color: #0000CD;
+    margin: 30px 0 0 130px;
+    /* 去除按钮默认自带的边框 */
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer {
+    height: 120px;
+    text-align: center;
+}
+
+.links {
+    /* 脚部模块 各种连接 暂定p标签 */
+    margin-top: 20px;
+    height: 30px;
+}
+
+.copyright {
+    /* 脚部模块 联系方式 */
+    line-height: 20px;
+}

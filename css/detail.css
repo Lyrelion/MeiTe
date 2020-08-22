@@ -1,0 +1,364 @@
+/*详情页的样式文件*/
+
+.de_container {
+    /* 详情内容盒子 无法指定高度 */
+    margin-top: 20px;
+}
+
+.crumb_wrap {
+    /* 面包屑导航 */
+    height: 25px;
+}
+
+.crumb_wrap a {
+    margin-right: 10px;
+}
+
+.preview_wrap {
+    /* 预览区域的大盒子 */
+    width: 400px;
+    height: 590px;
+}
+
+.preview_img {
+    /* 预览区域的盒子1 放大图片 */
+    height: 398px;
+    border: 1px solid #ccc;
+}
+
+.preview_list {
+    /* 预览区域的盒子2 放产品多视图 */
+    position: relative;
+    height: 60px;
+    margin-top: 60px;
+}
+
+.list_item {
+    /* 产品多视图列表ul  */
+    width: 320px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+.list_item li {
+    float: left;
+    width: 56px;
+    height: 56px;
+    /* 不设置边框颜色 鼠标经过时再展现边框 */
+    border: 2px solid transparent;
+    margin: 0 2px;
+}
+
+.list_item li .current {
+    /* 当前被选中的多视图 */
+    border-color: #0000CD;
+}
+
+.arrow_prev,
+.arrow_next {
+    /* 预览部分 多视图 左右按钮 */
+    position: absolute;
+    top: 15px;
+    width: 22px;
+    height: 32px;
+}
+
+.arrow_prev {
+    left: 0;
+    background: url(../img/arrow-prev.png) no-repeat;
+}
+
+.arrow_next {
+    right: 0;
+    background: url(../img/arrow-next.png) no-repeat;
+}
+
+.itemInfo_wrap {
+    /* 产品详情页 指定宽度 */
+    width: 718px;
+}
+
+.sku_name {
+    /* 产品详情大标题 */
+    height: 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.news {
+    /* 产品详情标题简介 */
+    height: 32px;
+    color: #0000CD;
+}
+
+.summary dl {
+    /* 隐藏dl多出的部分 */
+    overflow: hidden;
+}
+
+.summary dt,
+.summary dd {
+    /* 每项标题和内容 */
+    float: left;
+}
+
+.summary dt {
+    width: 60px;
+    padding-left: 10px;
+    line-height: 36px;
+}
+
+.summary_price,
+.summary_promotion {
+    /* 价格、促销这两行都用到了绝对定位 所以要给这两行dl 设定相对定位 */
+    position: relative;
+    padding: 10px 0;
+    background-color: #F5FFFA;
+}
+
+.price {
+    font-size: 24px;
+    color: #0000CD;
+}
+
+.summary_price a {
+    color: #0000CD;
+}
+
+.remark {
+    /* 更多评论 利用定位来设置位置 */
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+
+.summary_promotion {
+    /* 促销 */
+    padding-top: 0;
+}
+
+.summary_promotion dd {
+    width: 450px;
+    line-height: 36px;
+}
+
+.summary_promotion em {
+    /* 加购价盒子小图标 */
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    background-color: #0000CD;
+    text-align: center;
+    line-height: 22px;
+    color: #fff;
+}
+
+.summary_support dd {
+    /* 支持 */
+    line-height: 36px;
+}
+
+.choose_color a {
+    display: inline-block;
+    width: 80px;
+    height: 41px;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    text-align: center;
+    line-height: 41px;
+}
+
+.summary a.current {
+    border-color: #0000CD;
+}
+
+.choose_version {
+    /* 版本 */
+    margin: 10px 0;
+}
+
+.choose_version a,
+.choose_type a {
+    display: inline-block;
+    height: 32px;
+    padding: 0 12px;
+    background-color: #f7f7f7;
+    border: 1px solid #ededed;
+    text-align: center;
+    line-height: 32px;
+}
+
+.choose_btns {
+    /* 选择数量 + 加入购物车 组合大盒子 */
+    margin-top: 20px;
+}
+
+.choose_amount {
+    /* 选择数量 利用定位摆放里面的a标签 实现上下堆叠按钮 */
+    position: relative;
+    float: left;
+    width: 50px;
+    height: 46px;
+}
+
+.choose_amount input {
+    width: 33px;
+    height: 44px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.add,
+.reduce {
+    position: absolute;
+    right: 0;
+    width: 15px;
+    height: 22px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align: center;
+    line-height: 22px;
+}
+
+.add {
+    top: 0;
+}
+
+.reduce {
+    bottom: 0;
+    /*禁止鼠标样式*/
+    cursor: not-allowed;
+    /* pointer  小手  move  移动  */
+}
+
+.addcar {
+    float: left;
+    width: 142px;
+    height: 46px;
+    background-color: #0000CD;
+    text-align: center;
+    line-height: 46px;
+    font-size: 18px;
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.product_detail {
+    /* 产品细节部分 下面的大盒子 包括两块 其他商品+本商品详情 */
+    margin-bottom: 50px;
+}
+
+.aside {
+    /* 其他商品 */
+    width: 208px;
+    border: 1px solid #ccc;
+}
+
+.tab_list {
+    /* 给导航栏清除浮动 防止下面的每个导航对应的商品列表布局被改变 */
+    overflow: hidden;
+    height: 34px;
+}
+
+.tab_list li {
+    /*把背景颜色 底边框都给 li*/
+    float: left;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+}
+
+.tab_list .current {
+    /*鼠标单击 li 变化样式   背景变白色 去掉下边框 文字变颜色*/
+    background-color: #fff;
+    border-bottom: 0;
+    color: blue;
+}
+
+.first_tab {
+    /* 左边其他商品的导航栏1 */
+    width: 104px;
+}
+
+.second_tab {
+    /* 左边其他商品的导航栏2 */
+    width: 103px;
+    border-left: 1px solid #ccc;
+}
+
+.tab_con {
+    /* 每个导航栏对应的ul  */
+    padding: 0 10px;
+}
+
+.tab_con li {
+    border-bottom: 1px solid #ccc;
+}
+
+.tab_con li h5 {
+    /*超出的文字省略号显示 强迫一行显示 多余部分隐藏 省略号替代*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+}
+
+.aside_price {
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.as_addcar {
+    display: block;
+    width: 88px;
+    height: 26px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 26px;
+}
+
+.detail {
+    /* 本商品详情 右半部分 不能指定高度 因为不确定有多少信息*/
+    width: 978px;
+}
+
+.detail_tab_list {
+    /* 本商品详情 右半部分 导航栏 */
+    height: 39px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+.detail_tab_list li {
+    float: left;
+    height: 39px;
+    line-height: 39px;
+    padding: 0 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.detail_tab_list .current {
+    background-color: #0000CD;
+    color: #fff;
+}
+
+.item_info {
+    padding: 20px 0 0 20px;
+}
+
+.item_info li {
+    line-height: 22px;
+}
+
+.more {
+    /* 右半部分 本商品详情 查看更多信息 */
+    float: right;
+    font-weight: 700;
+    font-family: 'icomoon';
+}
